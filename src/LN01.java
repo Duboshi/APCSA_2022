@@ -1,9 +1,11 @@
 /*
  * Lecture note 01
  * Introduction to Java Programming
+ * 
+ * Block comment段落注释
  */
 
-//comment注释
+//line comment行内注释
 
 import java.util.Scanner;							//Step 1 of input
 
