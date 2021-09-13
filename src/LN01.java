@@ -5,18 +5,19 @@
 
 //comment注释
 
-import java.util.Scanner;				//Step 1 of input
+import java.util.Scanner;							//Step 1 of input
 
 public class LN01 {	//class类
-	private static Scanner in;			//Step 2 of input
+	private static Scanner in;						//Step 2 of input
 
-	public static void main(String[] args) {	//method方法（函数）
-		System.out.println("Hello World!");		//statement语句
+	public static void main(String[] args) {		//method方法（函数）
+		System.out.println("Hello World!");			//statement语句
 		
-		int n;		//Declaration声明/建立 of an int (type) variables named n
-		n = 5 + 3;	//Assignment赋值
+		int n;
+		//Declaration声明/建立 of an int (type) variables named n
+		n = 5 + 3;									//Assignment赋值
 		System.out.println(n);
-		n = n * 4;	//Assignment
+		n = n * 4;									//Assignment
 		System.out.println(n);
 		
 		double x = 5.5;
@@ -31,18 +32,20 @@ public class LN01 {	//class类
 		//Arithmetic operators: + - * / %
 		System.out.println(8/5); 	//integer division
 		System.out.println(8/5.0);
-		System.out.println(8%5); 	//modulus operator, remainder of 8 divided by 5
-		System.out.println(8%(-5));	//3
-		System.out.println((-8)%5);	//-3, same sign as the dividend, not as divisor
-		System.out.println(x%y); 	//round-off error
+		System.out.println(8%5); 							//modulus operator, remainder of 8 divided by 5
+		System.out.println(8%(-5));							//3
+		System.out.println((-8)%5);							//-3, same sign as the dividend, not as divisor
+		System.out.println(x%y); 							//round-off error
 		
 		System.out.println(0.1 + 0.1);
-		System.out.println(0.1 + 0.1 + 0.1);	//round-off error
+		System.out.println(0.1 + 0.1 + 0.1);				//round-off error
 		
 		//String字符串
 		String s1 = "Ai", s2 = "Zeng";
 		System.out.println(s1.compareTo(s2));
-		System.out.println(s1 + s2);	//concatenation of strings
+		System.out.println(s1 + s2);						//concatenation of strings
+		System.out.println(1 + 2 + "String");				//3String
+		System.out.println("String" + 1 + 2);				//String12
 		
 		//Escape sequence转义字符 and formatted print格式输出
 	    System.out.print("Hello, Senior 3~\n"); 			//escape sequence \n, backslash
@@ -70,15 +73,15 @@ public class LN01 {	//class类
         //System.out.println(5/0);
         
         //input and Scanner.in
-		in = new Scanner(System.in);	//Step 3 of input
+		in = new Scanner(System.in);				//Step 3 of input
 		System.out.println("What is your name?");
-		String name = in.nextLine();	//Step 4 of input
+		String name = in.nextLine();				//Step 4 of input
 		System.out.println("Hello, " + name);
 		System.out.println("What is your height in cm?");
 		int h = in.nextInt();
-		final double cmPerInch = 2.54;	//constant
+		final double cmPerInch = 2.54;				//constant
 		final int inchPerFoot = 12;
-		int feet = (int)(h/cmPerInch/12);
+		int feet = (int)(h/cmPerInch/12);			//type cast
 		int inch = (int)(h/cmPerInch%12);
 		System.out.println(feet + " feet " + inch + " inches.");
 		
