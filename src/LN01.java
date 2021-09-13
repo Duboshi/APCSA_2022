@@ -1,12 +1,14 @@
 /*
  * Lecture note 01
- * @Author: Dubos
  * Introduction to Java Programming
  */
 
 //comment注释
 
+import java.util.Scanner;				//Step 1 of input
+
 public class LN01 {	//class类
+	private static Scanner in;			//Step 2 of input
 
 	public static void main(String[] args) {	//method方法（函数）
 		System.out.println("Hello World!");		//statement语句
@@ -42,7 +44,7 @@ public class LN01 {	//class类
 		System.out.println(s1.compareTo(s2));
 		System.out.println(s1 + s2);	//concatenation of strings
 		
-		//Escape sequence and formatted print
+		//Escape sequence转义字符 and formatted print格式输出
 	    System.out.print("Hello, Senior 3~\n"); 			//escape sequence \n, backslash
 	    System.out.println("He said \"Hello, World!\""); 	// escape sequence\"
 	    System.out.println("\\^0^/"); 						// escape sequence\\
@@ -59,17 +61,53 @@ public class LN01 {	//class类
         //printf method: %d, %2d, %02d, %f, %2f, %02f
         
         //0x: octal八进制，1 2 3 4 5 6 7 10 11
-        
         double percent;
         int sum = 3600*hour + 60*min + snd;
         System.out.println(sum);
         percent = sum/86400.0;
         System.out.println(percent);
         //Compile-time error, run-time error, logic error
-        //System.out.println(5/0);    
+        //System.out.println(5/0);
+        
+        //input and Scanner.in
+		in = new Scanner(System.in);	//Step 3 of input
+		System.out.println("What is your name?");
+		String name = in.nextLine();	//Step 4 of input
+		System.out.println("Hello, " + name);
+		System.out.println("What is your height in cm?");
+		int h = in.nextInt();
+		final double cmPerInch = 2.54;	//constant
+		final int inchPerFoot = 12;
+		int feet = (int)(h/cmPerInch/12);
+		int inch = (int)(h/cmPerInch%12);
+		System.out.println(feet + " feet " + inch + " inches.");
+		
+		//void method vs. value method
+		System.out.println(sum(2, 5));
+		voidsum(2, 5);
+		System.out.println(sum(1.1, 2.2));
+		
+		//Recursion
+		countdown(5);       
 	}
 	
-	public static void doSomething() {
-		
+	public static int sum(int a, int b) {			//value method which returns an int
+		return a + b;
+	}
+		   
+	public static void voidsum(int a, int b) {		//void method
+		System.out.println(a + b);
+	}
+		   
+	public static double sum(double a, double b) {  //value method which returns a double
+		return a + b;
+	}
+	
+	public static void countdown(int n) {
+		if (n>0) {
+			System.out.println(n);
+			countdown(n-1);							//recursion递归
+		} else
+			System.out.println("GO!!!");
 	}
 }
