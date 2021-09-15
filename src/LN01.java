@@ -32,15 +32,22 @@ public class LN01 {	//class类
 		int m = 5;
 		
 		//Arithmetic operators: + - * / %
-		System.out.println(8/5); 	//integer division
+		System.out.println(8/5); 					//integer division
 		System.out.println(8/5.0);
-		System.out.println(8%5); 							//modulus operator, remainder of 8 divided by 5
-		System.out.println(8%(-5));							//3
-		System.out.println((-8)%5);							//-3, same sign as the dividend, not as divisor
-		System.out.println(x%y); 							//round-off error
+		System.out.println(8%5); 					//modulus operator, remainder of 8 divided by 5
+		System.out.println(8%(-5));					//3
+		System.out.println((-8)%5);					//-3, same sign as the dividend, not as divisor
+		System.out.println(x%y); 					//round-off error
 		
 		System.out.println(0.1 + 0.1);
-		System.out.println(0.1 + 0.1 + 0.1);				//round-off error
+		System.out.println(0.1 + 0.1 + 0.1);		//round-off error
+		
+		//Assignment operator
+		n = 6;
+		n *= 3;
+		System.out.println(n);		//18. n*=3 means n = n*3. The same applies to +=, -=, /=, %=
+		n %= 5;
+		System.out.println(n);		//3
 		
 		//String字符串
 		String s1 = "Ai", s2 = "Zeng";
