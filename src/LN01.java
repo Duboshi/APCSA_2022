@@ -26,7 +26,7 @@ public class LN01 {	//class类
 		double y = 2.2;
 		System.out.println(x + y);
 		
-		//Primitive types: double浮点数/实数/小数, int整型变量（整数）
+		//Primitive types: double浮点数/实数/小数, int整型变量（整数），boolean布尔变量（真伪）
 		System.out.println(x + y); //+, -, *, /
 		n = 8;
 		int m = 5;
