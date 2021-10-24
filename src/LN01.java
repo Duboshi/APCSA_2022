@@ -98,9 +98,7 @@ public class LN01 {	//class类
 		System.out.println(sum(2, 5));
 		voidsum(2, 5);
 		System.out.println(sum(1.1, 2.2));
-		
-		//Recursion
-		countdown(5);       
+
 	}
 	
 	public static int sum(int a, int b) {			//value method which returns an int
@@ -115,11 +113,5 @@ public class LN01 {	//class类
 		return a + b;
 	}
 	
-	public static void countdown(int n) {
-		if (n>0) {
-			System.out.println(n);
-			countdown(n-1);							//recursion递归
-		} else
-			System.out.println("GO!!!");
-	}
+
 }
