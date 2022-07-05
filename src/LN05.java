@@ -7,17 +7,19 @@ import java.util.Arrays;
 public class LN05 {
 	public static void main(String[] args) {
 		//Array, elements, declaration
-		int[] a = new int[5];
-		//declaration of an array named a with 4 int elements
-
+		
 		//type[] name = new type[length];
+		int[] a = new int[5];
+		//declaration of an array named a with 5 int elements
 
-		//the index of an array start from index 0, ends at index length-1.
+		//the index of an array start from 0, ends at length-1.
 		a[0] = 1;
 		a[1] = 2;
 		a[2] = 3;
 		a[3] = 4;
 		a[4] = 5;
+		
+		//https://www.luogu.com.cn/problem/P1428
 
 		//Array traversal: looping through all elements of an array
 		for (int i=0; i<a.length; i++) {
@@ -40,6 +42,7 @@ public class LN05 {
 		for (int i=0; i<d.length; i++) {
 			d[i] = (i+1)*(i+1);
 		}
+		
 		printArray(d);
 		//Enhanced for loop (for-each loop)
 		printArray2(d);
@@ -67,7 +70,6 @@ public class LN05 {
 	}
 
 	public static void printArray(int[] arr) {
-		System.out.print(arr + ": ");
 		for (int i=0; i<arr.length; i++) {
 			System.out.print(arr[i] + " ");
 		}	
@@ -76,7 +78,6 @@ public class LN05 {
 	}
 
 	public static void printArray2(int[] arr) {
-		System.out.print(arr + ": ");
 		//Enhanced for loop (for-each loop)
 		for (int n:arr) 
 			System.out.print(n + " ");
